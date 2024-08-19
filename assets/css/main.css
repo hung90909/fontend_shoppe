@@ -1,0 +1,163 @@
+:root {
+   --black-color: #000;
+   --white-color: #fff;
+   --text-color: #333;
+   --color-primary: #eb250b;
+   --header-height: 120px;
+   --header-top-height: 33px;
+   --header-bottom-height: calc(var(--header-height) - var(--header-top-height));
+}
+
+* {
+   box-sizing: inherit;
+}
+
+html {
+   font-size: 62.5%;
+   line-height: 1.6rem;
+   font-family: "Roboto", sans-serif;
+   box-sizing: border-box;
+
+}
+
+.grid {
+   max-width: 1200px;
+   margin: 0 auto;
+
+}
+
+.grid__full-width {
+   width: 100%;
+}
+
+.grid__row {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: -5px;
+   margin-right: -5px;
+   margin-top: 8px;
+
+}
+
+.grid__column-2 {
+   padding: 0 5px;
+   width: 16.6667%;
+}
+
+.grid__column-10-5 {
+   padding: 0 5px 8px;
+   width: 20%;
+}
+
+.grid__column-10 {
+   padding: 0 5px;
+   width: 83.3333%;
+
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes ScaleOut {
+   from {
+      transform: scale(var(--Scale-form));
+   }
+
+   to {
+      transform: scale(var(--Scale-to));
+   }
+}
+
+/* CSS: Modal */
+
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   display: flex;
+}
+
+.modal__overlay {
+   background-color: rgba(0, 0, 0, 0.3);
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   animation: fadeIn linear 0.3s;
+
+}
+
+.modal__body {
+   margin: auto;
+   z-index: 1;
+}
+
+/* CSS: btn */
+
+.btn {
+   border: none;
+   padding: 10px 40px;
+   font-size: 1.4rem;
+   border-radius: 3px;
+   background: var(--white-color);
+   cursor: pointer;
+}
+
+.btn.btn-size-m {
+   font-size: 16px;
+   padding: 10px 8px;
+   display: flex;
+   align-items: center;
+}
+
+.btn.btn-normal:hover {
+   background: rgba(0, 0, 0, 0.03);
+
+}
+
+.btn.btn--primary {
+   background-color: var(--color-primary);
+   color: #fff;
+}
+
+.btn.btn__mr-8px {
+   margin-right: 8px;
+}
+
+/* paging */
+
+.list-paging {
+   display: flex;
+   list-style: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.paging-item {
+   margin: 0 14px;
+}
+
+.paging-item--active .paging-item__link {
+   background-color: var(--color-primary);
+   color: var(--white-color);
+   text-align: center;
+}
+
+.paging-item__link {
+   display: block;
+   height: 30px;
+   min-width: 40px;
+   line-height: 30px;
+   text-decoration: none;
+   font-size: 1.6rem;
+   color: var(--text-color);
+}
